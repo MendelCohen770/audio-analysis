@@ -1,0 +1,68 @@
+.box{
+    direction: rtl;
+    position: fixed;
+    bottom: 40px;
+    min-width: 350px;
+    max-width: 80vw;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #222;
+    font-size: 2.2rem;
+    font-weight: bold;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+    z-index: 9999;
+    pointer-events: none;
+    transition: opacity 0.7s, transform 0.7s;
+    text-align: center;
+    letter-spacing: 1px;
+    border: 3px solid #ffb347;
+}
+.insight-box {
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%) translateY(100px);
+    min-width: 350px;
+    max-width: 80vw;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, #d2e3ff 0%, #606dff 100%);
+    color: #222;
+    font-size: 2.2rem;
+    font-weight: bold;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+    opacity: 0;
+    z-index: 9999;
+    pointer-events: none;
+    transition: opacity 0.7s, transform 0.7s;
+    text-align: center;
+    letter-spacing: 1px;
+    border: 3px solid #1204a8;
+  }
+  
+  .insight-box.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    animation: insight-in 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .insight-box.hide {
+    opacity: 0;
+    transform: translateX(-50%) translateY(100px);
+    transition: opacity 2.5s, transform 2.5s;
+}
+@keyframes insight-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(100px) scale(0.95);
+    }
+    80% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-10px) scale(1.03);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0) scale(1);
+    }
+  }
