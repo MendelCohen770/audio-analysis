@@ -1,4 +1,3 @@
-import React from 'react'
 import '../style/InsightBox.css'
 
 function InsightBox({ text, visible }: { text: string, visible: boolean }) {

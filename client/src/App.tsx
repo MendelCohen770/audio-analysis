@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import './App.css'
 import axios from 'axios';
 import InsightBox from './components/InsightBox';
