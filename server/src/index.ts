@@ -16,6 +16,10 @@ app.use(express.json());
 
 app.post("/api/chat", async (req : Request, res : Response) => {
     const text = req.body.text;
+    if(!text){
+        const response = "המשתמש לא הזכיר חיות."
+        return res.status(400).json(response);
+    }
     try{
         const completion = await openai.chat.completions.create({
             model: "gpt-4o-mini",
