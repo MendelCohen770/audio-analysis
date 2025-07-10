@@ -52,7 +52,7 @@ function App() {
 
   const analyzeText = async (text: string) => {
     try {
-      const response = await axios.post('http://localhost:3000/api/chat', { text });
+      const response = await axios.post('https://audio-analysis-server-production.up.railway.app/api/chat', { text });
       setAnalysis(response.data.response);
       setShowInsight(true);
       setTimeout(() => {
