@@ -72,9 +72,9 @@ function App() {
       <div style={{ padding: 50, textAlign: "center" }}>
         <h1>ניתוח בזמן אמת</h1>
         {!listening ? (
-          <button onClick={startListening}>הפעל מיקרופון</button>
+          <button onClick={startListening} title='הפעל מיקרופון'>הפעל מיקרופון</button>
         ) : (
-          <button onClick={stopListening}>עצור מיקרופון</button>
+          <button onClick={stopListening} title='עצור מיקרופון'>עצור מיקרופון</button>
         )}
         <div style={{ marginTop: 30 }}>
           <strong>מה ששמעתי:</strong> {transcript}
